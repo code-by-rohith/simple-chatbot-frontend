@@ -1,0 +1,121 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .chat-container {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    perspective: 800px; /* Perspective for 3D effects */
+    transform-style: preserve-3d; /* Preserve 3D transforms */
+    transition: transform 0.3s ease; /* Add transition for rotation */
+  }
+  
+  .chat-container:hover {
+    transform: rotateY(5deg); /* Rotate slightly on hover for 3D effect */
+  }
+  
+  .chat-header {
+    background-color: #230063; /* Coral */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .chat-messages {
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 300px;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease;
+  }
+  
+  .message-bot, .message-user {
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  .message-bot:hover, .message-user:hover {
+    border-color: #ddd;
+  }
+  
+  .message-bot {
+    background-color: #FF6F61; /* Coral */
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    align-self: flex-start;
+  }
+  
+  .message-user {
+    background-color: #3498DB;
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    align-self: flex-end;
+  }
+  
+  .chat-input-container {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #ddd;
+    padding: 20px;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .send-btn {
+    width: 60px;
+    height: 50px;
+    background-color: #FF6F61; /* Coral */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .send-btn:hover {
+    background-color: #FF6347; /* Darker Coral */
+  }
+  
+  .send-btn:active {
+    transform: scale(0.95); /* Add button press effect */
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Initial translation */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* No translation */
+    }
+  }
+  
